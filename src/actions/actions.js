@@ -2,7 +2,7 @@ import db from "../firebase";
 
 export const fetchInit = () => async dispatch => {
   const coupons = await db
-    .collection("testShops")
+    .collection("shops")
     .get()
     .then(
       querySnapshot => {

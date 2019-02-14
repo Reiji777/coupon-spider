@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          {coupons.map(this.showShopLogo)}
+        <Route exact path="/" render={()=>coupons.map(this.showShopLogo)} />
           <Route path="/:shopName" component={ShopPage} />
         </div>
       </Router>
@@ -41,15 +41,13 @@ class App extends Component {
     let { ShopList } = this;
     return (
       <div className="App">
-        <header className="App-header">
-          <div className="shopList">
+        <div className="shopList">
             {this.props.coupons ? (
               <ShopList coupons={this.props.coupons} />
             ) : (
               ""
             )}
           </div>
-        </header>
       </div>
     );
   }
