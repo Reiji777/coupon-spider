@@ -15,7 +15,7 @@ class ShopPage extends Component {
             <img className="couponImg" src={coupon.imgSrc} alt={index} />
           </div>
           <div className="couponText">
-            <p>{coupon.item}</p>
+            <p dangerouslySetInnerHTML={{__html: coupon.item}}></p>
           </div>
         </div>
       );

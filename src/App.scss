@@ -21,14 +21,14 @@
         margin-bottom: 10px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         width: 90%;
         padding: 10px 5px;
         border: 1px dashed #666666;
         border-radius: 5px;
         .couponImg{
-          width: 100px;
+          width: 70px;
         }
         .couponText {
           font-size: 10px;
