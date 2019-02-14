@@ -1,0 +1,15 @@
+.App {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    .shopLogo {
+        padding: 5px;
+        width: 30%;
+        height: 30%;
+        border-radius: 50%;
+    }
+}
