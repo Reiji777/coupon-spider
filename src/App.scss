@@ -1,15 +1,41 @@
 .App {
-    width: 100%;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  .shopList {
     .shopLogo {
-        padding: 5px;
-        width: 30%;
-        height: 30%;
-        border-radius: 50%;
+      padding: 5px;
+      width: 30%;
+      height: 30%;
+      border-radius: 50%;
     }
+    .couponList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      .coupon {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        padding: 10px 5px;
+        border: 1px dashed #666666;
+        border-radius: 5px;
+        .couponImg{
+          width: 100px;
+        }
+        .couponText {
+          font-size: 10px;
+          text-align: left;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
 }
