@@ -38,6 +38,7 @@ class App extends Component {
   }
 
   render() {
+    document.title = "クーポン★ナビ";
     let { ShopList } = this;
     return (
       <div className="App">
