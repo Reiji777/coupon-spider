@@ -21,7 +21,20 @@ class App extends Component {
     return (
       <Router>
         <div>
-        <Route exact path="/" render={()=>coupons.map(this.showShopLogo)} />
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return coupons.map(
+                (elem) => {
+                if (elem.couponList.length) {
+                  return this.showShopLogo(elem);
+                } else {
+                  return null;
+                }
+              });
+            }}
+          />
           <Route path="/:shopName" component={ShopPage} />
         </div>
       </Router>
@@ -38,17 +51,12 @@ class App extends Component {
   }
 
   render() {
-    document.title = "クーポン★ナビ";
     let { ShopList } = this;
     return (
       <div className="App">
         <div className="shopList">
-            {this.props.coupons ? (
-              <ShopList coupons={this.props.coupons} />
-            ) : (
-              ""
-            )}
-          </div>
+          {this.props.coupons ? <ShopList coupons={this.props.coupons} /> : ""}
+        </div>
       </div>
     );
   }

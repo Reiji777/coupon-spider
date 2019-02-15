@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "../App.scss";
 class ShopPage extends Component {
-  setTitle(title) {
-    document.title = title;
-  }
+  // setTitle(title) {
+  //   document.title = title;
+  // }
 
   ShowCouponList({ shop }) {
     let coupons = shop.couponList.map((coupon, index) => {
@@ -24,7 +24,7 @@ class ShopPage extends Component {
   }
 
   render() {
-    this.setTitle(this.props.match.params.shopName);
+    // this.setTitle(this.props.match.params.shopName);
     let { ShowCouponList } = this;
     let [shop] = this.props.coupons.filter(
       shop => shop.shopName === this.props.match.params.shopName
